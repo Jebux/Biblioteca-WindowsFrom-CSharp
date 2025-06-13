@@ -1,0 +1,16 @@
+C:\Users\estudiante.upb\source\repos\BibliotecaForms\BibliotecaForms\bin\Debug\net8.0-windows\BibliotecaForms.exe
+C:\Users\estudiante.upb\source\repos\BibliotecaForms\BibliotecaForms\bin\Debug\net8.0-windows\BibliotecaForms.deps.json
+C:\Users\estudiante.upb\source\repos\BibliotecaForms\BibliotecaForms\bin\Debug\net8.0-windows\BibliotecaForms.runtimeconfig.json
+C:\Users\estudiante.upb\source\repos\BibliotecaForms\BibliotecaForms\bin\Debug\net8.0-windows\BibliotecaForms.dll
+C:\Users\estudiante.upb\source\repos\BibliotecaForms\BibliotecaForms\bin\Debug\net8.0-windows\BibliotecaForms.pdb
+C:\Users\estudiante.upb\source\repos\BibliotecaForms\BibliotecaForms\obj\Debug\net8.0-windows\BibliotecaForms.Form1.resources
+C:\Users\estudiante.upb\source\repos\BibliotecaForms\BibliotecaForms\obj\Debug\net8.0-windows\BibliotecaForms.csproj.GenerateResource.cache
+C:\Users\estudiante.upb\source\repos\BibliotecaForms\BibliotecaForms\obj\Debug\net8.0-windows\BibliotecaForms.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\estudiante.upb\source\repos\BibliotecaForms\BibliotecaForms\obj\Debug\net8.0-windows\BibliotecaForms.AssemblyInfoInputs.cache
+C:\Users\estudiante.upb\source\repos\BibliotecaForms\BibliotecaForms\obj\Debug\net8.0-windows\BibliotecaForms.AssemblyInfo.cs
+C:\Users\estudiante.upb\source\repos\BibliotecaForms\BibliotecaForms\obj\Debug\net8.0-windows\BibliotecaForms.csproj.CoreCompileInputs.cache
+C:\Users\estudiante.upb\source\repos\BibliotecaForms\BibliotecaForms\obj\Debug\net8.0-windows\BibliotecaForms.dll
+C:\Users\estudiante.upb\source\repos\BibliotecaForms\BibliotecaForms\obj\Debug\net8.0-windows\refint\BibliotecaForms.dll
+C:\Users\estudiante.upb\source\repos\BibliotecaForms\BibliotecaForms\obj\Debug\net8.0-windows\BibliotecaForms.pdb
+C:\Users\estudiante.upb\source\repos\BibliotecaForms\BibliotecaForms\obj\Debug\net8.0-windows\BibliotecaForms.genruntimeconfig.cache
+C:\Users\estudiante.upb\source\repos\BibliotecaForms\BibliotecaForms\obj\Debug\net8.0-windows\ref\BibliotecaForms.dll
