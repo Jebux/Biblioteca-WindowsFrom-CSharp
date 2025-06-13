@@ -9,25 +9,6 @@ namespace BibliotecaForms
             InitializeComponent();
         }
 
-        public class Libro
-        {
-            public string Titulo { get; private set; }
-            public string Autor { get; private set; }
-            public int AnioPublicacion { get; private set; }
-            public bool EstaPrestado { get; private set; }
-
-            public Libro(string titulo, string autor, int anioPublicacion)
-            {
-                Titulo = titulo;
-                Autor = autor;
-                AnioPublicacion = anioPublicacion;
-                EstaPrestado = false;
-            }
-        }
-
-
-        List<Libro> Libros = new List<Libro>(); 
-        
         private void btnRegistro_Click(object sender, EventArgs e)
         {
 
@@ -39,8 +20,11 @@ namespace BibliotecaForms
 
             if (!string.IsNullOrWhiteSpace(titulo) && !string.IsNullOrWhiteSpace(autor))
             {
-                Libros.Add(new Libro(titulo, autor, int.Parse(anioPublicacion)));
+                Biblioteca.AgregarLibro(new Libro(titulo, autor, int.Parse(anioPublicacion)));
                 MessageBox.Show("Libro registrado exitosamente.");
+                inputTitulo.Text = "";
+                inputAutor.Text = "";
+                inputAño.Text = "";
             }
             else
             {
@@ -50,12 +34,23 @@ namespace BibliotecaForms
 
         private void btnActualizarGrid_Click(object sender, EventArgs e)
         {
-            var librosReducidos = Libros.Select(p => new
+            var bibliotecaActual = Biblioteca.MostrarLibros();
+            var librosReducidos = bibliotecaActual.Select(p => new
             {
                 p.Titulo,
-                p.Autor 
+                p.Autor
             }).ToList();
             BibliotecaGrid.DataSource = librosReducidos;
+        }
+
+        private void BibliotecaGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
