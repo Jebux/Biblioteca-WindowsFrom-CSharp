@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BibliotecaForms")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4dc35a0b3e73e6fffd5898971260d8b65f2484b5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cccdfc5c37c83ff7e8d5d55a87b0d86a099743ce")]
 [assembly: System.Reflection.AssemblyProductAttribute("BibliotecaForms")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BibliotecaForms")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -38,37 +38,55 @@
             tabControl1 = new TabControl();
             RegistrarTab = new TabPage();
             label4 = new Label();
-            PrestarLibroTab = new TabPage();
-            AntiguedadTab = new TabPage();
-            CalAntiguedadTab = new TabPage();
             ModificarTab = new TabPage();
-            DevolverTab = new TabPage();
-            CompararTab = new TabPage();
-            BibliotecaGrid = new DataGridView();
-            label1 = new Label();
+            label13 = new Label();
+            inputModificarTitulo = new TextBox();
+            label9 = new Label();
+            inputNuevoAutor = new TextBox();
+            button1 = new Button();
+            label10 = new Label();
+            inputNuevoAnio = new TextBox();
+            inputNuevoTitulo = new TextBox();
+            label11 = new Label();
+            label12 = new Label();
+            PrestarLibroTab = new TabPage();
             label5 = new Label();
             btnPrestar = new Button();
             label6 = new Label();
             inputPrestar = new TextBox();
+            DevolverTab = new TabPage();
             label7 = new Label();
             btnDevolver = new Button();
             label8 = new Label();
-            textBox1 = new TextBox();
-            label9 = new Label();
-            textBox2 = new TextBox();
-            button1 = new Button();
-            label10 = new Label();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            label11 = new Label();
-            label12 = new Label();
-            label13 = new Label();
-            textBox5 = new TextBox();
+            inputDevolver = new TextBox();
+            AntiguedadTab = new TabPage();
+            label14 = new Label();
+            btnAntiguo = new Button();
+            label15 = new Label();
+            inputAntiguo = new TextBox();
+            CalAntiguedadTab = new TabPage();
+            label16 = new Label();
+            btnCalcAntiguedad = new Button();
+            label17 = new Label();
+            inputCalcAnt = new TextBox();
+            CompararTab = new TabPage();
+            label21 = new Label();
+            label20 = new Label();
+            inputComparar2 = new TextBox();
+            label18 = new Label();
+            btnComparar = new Button();
+            label19 = new Label();
+            inputComparar1 = new TextBox();
+            BibliotecaGrid = new DataGridView();
+            label1 = new Label();
             tabControl1.SuspendLayout();
             RegistrarTab.SuspendLayout();
-            PrestarLibroTab.SuspendLayout();
             ModificarTab.SuspendLayout();
+            PrestarLibroTab.SuspendLayout();
             DevolverTab.SuspendLayout();
+            AntiguedadTab.SuspendLayout();
+            CalAntiguedadTab.SuspendLayout();
+            CompararTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)BibliotecaGrid).BeginInit();
             SuspendLayout();
             // 
@@ -128,7 +146,7 @@
             btnRegistrar.TabIndex = 6;
             btnRegistrar.Text = "Registrar";
             btnRegistrar.UseVisualStyleBackColor = true;
-            btnRegistrar.Click += btnRegistro_Click;
+            btnRegistrar.Click += Event_Registro_Click;
             // 
             // tabControl1
             // 
@@ -139,7 +157,7 @@
             tabControl1.Controls.Add(AntiguedadTab);
             tabControl1.Controls.Add(CalAntiguedadTab);
             tabControl1.Controls.Add(CompararTab);
-            tabControl1.Location = new Point(22, 49);
+            tabControl1.Location = new Point(9, 49);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
             tabControl1.Size = new Size(453, 244);
@@ -172,52 +190,17 @@
             label4.Size = new Size(232, 28);
             label4.TabIndex = 7;
             label4.Text = "Registro de nuevos libros";
-            label4.Click += label4_Click;
-            // 
-            // PrestarLibroTab
-            // 
-            PrestarLibroTab.Controls.Add(label5);
-            PrestarLibroTab.Controls.Add(btnPrestar);
-            PrestarLibroTab.Controls.Add(label6);
-            PrestarLibroTab.Controls.Add(inputPrestar);
-            PrestarLibroTab.Location = new Point(4, 24);
-            PrestarLibroTab.Name = "PrestarLibroTab";
-            PrestarLibroTab.Padding = new Padding(3);
-            PrestarLibroTab.Size = new Size(445, 216);
-            PrestarLibroTab.TabIndex = 1;
-            PrestarLibroTab.Text = "Prestar";
-            PrestarLibroTab.UseVisualStyleBackColor = true;
-            // 
-            // AntiguedadTab
-            // 
-            AntiguedadTab.Location = new Point(4, 24);
-            AntiguedadTab.Name = "AntiguedadTab";
-            AntiguedadTab.Padding = new Padding(3);
-            AntiguedadTab.Size = new Size(445, 216);
-            AntiguedadTab.TabIndex = 2;
-            AntiguedadTab.Text = "Antiguo";
-            AntiguedadTab.UseVisualStyleBackColor = true;
-            // 
-            // CalAntiguedadTab
-            // 
-            CalAntiguedadTab.Location = new Point(4, 24);
-            CalAntiguedadTab.Name = "CalAntiguedadTab";
-            CalAntiguedadTab.Padding = new Padding(3);
-            CalAntiguedadTab.Size = new Size(445, 216);
-            CalAntiguedadTab.TabIndex = 3;
-            CalAntiguedadTab.Text = "CalcAnt";
-            CalAntiguedadTab.UseVisualStyleBackColor = true;
             // 
             // ModificarTab
             // 
             ModificarTab.Controls.Add(label13);
-            ModificarTab.Controls.Add(textBox5);
+            ModificarTab.Controls.Add(inputModificarTitulo);
             ModificarTab.Controls.Add(label9);
-            ModificarTab.Controls.Add(textBox2);
+            ModificarTab.Controls.Add(inputNuevoAutor);
             ModificarTab.Controls.Add(button1);
             ModificarTab.Controls.Add(label10);
-            ModificarTab.Controls.Add(textBox3);
-            ModificarTab.Controls.Add(textBox4);
+            ModificarTab.Controls.Add(inputNuevoAnio);
+            ModificarTab.Controls.Add(inputNuevoTitulo);
             ModificarTab.Controls.Add(label11);
             ModificarTab.Controls.Add(label12);
             ModificarTab.Location = new Point(4, 24);
@@ -228,118 +211,21 @@
             ModificarTab.Text = "Modificar";
             ModificarTab.UseVisualStyleBackColor = true;
             // 
-            // DevolverTab
+            // label13
             // 
-            DevolverTab.Controls.Add(label7);
-            DevolverTab.Controls.Add(btnDevolver);
-            DevolverTab.Controls.Add(label8);
-            DevolverTab.Controls.Add(textBox1);
-            DevolverTab.Location = new Point(4, 24);
-            DevolverTab.Name = "DevolverTab";
-            DevolverTab.Padding = new Padding(3);
-            DevolverTab.Size = new Size(445, 216);
-            DevolverTab.TabIndex = 5;
-            DevolverTab.Text = "Devolver";
-            DevolverTab.UseVisualStyleBackColor = true;
+            label13.AutoSize = true;
+            label13.Location = new Point(42, 53);
+            label13.Name = "label13";
+            label13.Size = new Size(100, 15);
+            label13.TabIndex = 16;
+            label13.Text = "Titulo a modificar";
             // 
-            // CompararTab
+            // inputModificarTitulo
             // 
-            CompararTab.Location = new Point(4, 24);
-            CompararTab.Name = "CompararTab";
-            CompararTab.Padding = new Padding(3);
-            CompararTab.Size = new Size(445, 216);
-            CompararTab.TabIndex = 6;
-            CompararTab.Text = "Comparar";
-            CompararTab.UseVisualStyleBackColor = true;
-            // 
-            // BibliotecaGrid
-            // 
-            BibliotecaGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            BibliotecaGrid.Location = new Point(493, 49);
-            BibliotecaGrid.Name = "BibliotecaGrid";
-            BibliotecaGrid.Size = new Size(268, 371);
-            BibliotecaGrid.TabIndex = 0;
-            BibliotecaGrid.CellContentClick += BibliotecaGrid_CellContentClick;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 20F);
-            label1.Location = new Point(307, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(155, 37);
-            label1.TabIndex = 8;
-            label1.Text = "BIBLIOTECA";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 15F);
-            label5.Location = new Point(154, 17);
-            label5.Name = "label5";
-            label5.Size = new Size(126, 28);
-            label5.TabIndex = 11;
-            label5.Text = "Prestar libros";
-            // 
-            // btnPrestar
-            // 
-            btnPrestar.Location = new Point(270, 113);
-            btnPrestar.Name = "btnPrestar";
-            btnPrestar.Size = new Size(118, 23);
-            btnPrestar.TabIndex = 10;
-            btnPrestar.Text = "Prestar";
-            btnPrestar.UseVisualStyleBackColor = true;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(27, 70);
-            label6.Name = "label6";
-            label6.Size = new Size(85, 15);
-            label6.TabIndex = 8;
-            label6.Text = "Titulo a prestar";
-            // 
-            // inputPrestar
-            // 
-            inputPrestar.Location = new Point(118, 67);
-            inputPrestar.Name = "inputPrestar";
-            inputPrestar.Size = new Size(270, 23);
-            inputPrestar.TabIndex = 9;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 15F);
-            label7.Location = new Point(144, 27);
-            label7.Name = "label7";
-            label7.Size = new Size(144, 28);
-            label7.TabIndex = 15;
-            label7.Text = "Devolver libros";
-            // 
-            // btnDevolver
-            // 
-            btnDevolver.Location = new Point(285, 125);
-            btnDevolver.Name = "btnDevolver";
-            btnDevolver.Size = new Size(118, 23);
-            btnDevolver.TabIndex = 14;
-            btnDevolver.Text = "Devolver";
-            btnDevolver.UseVisualStyleBackColor = true;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(33, 83);
-            label8.Name = "label8";
-            label8.Size = new Size(94, 15);
-            label8.TabIndex = 12;
-            label8.Text = "Titulo a devolver";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(133, 79);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(270, 23);
-            textBox1.TabIndex = 13;
+            inputModificarTitulo.Location = new Point(148, 50);
+            inputModificarTitulo.Name = "inputModificarTitulo";
+            inputModificarTitulo.Size = new Size(255, 23);
+            inputModificarTitulo.TabIndex = 17;
             // 
             // label9
             // 
@@ -351,12 +237,12 @@
             label9.TabIndex = 15;
             label9.Text = "Modificar Información libros";
             // 
-            // textBox2
+            // inputNuevoAutor
             // 
-            textBox2.Location = new Point(148, 108);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(255, 23);
-            textBox2.TabIndex = 11;
+            inputNuevoAutor.Location = new Point(148, 108);
+            inputNuevoAutor.Name = "inputNuevoAutor";
+            inputNuevoAutor.Size = new Size(255, 23);
+            inputNuevoAutor.TabIndex = 11;
             // 
             // button1
             // 
@@ -364,8 +250,9 @@
             button1.Name = "button1";
             button1.Size = new Size(118, 23);
             button1.TabIndex = 14;
-            button1.Text = "Registrar";
+            button1.Text = "Modificar";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += Event_ModificarInfo_Click;
             // 
             // label10
             // 
@@ -376,19 +263,19 @@
             label10.TabIndex = 8;
             label10.Text = "Nuevo Titulo";
             // 
-            // textBox3
+            // inputNuevoAnio
             // 
-            textBox3.Location = new Point(148, 140);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(95, 23);
-            textBox3.TabIndex = 13;
+            inputNuevoAnio.Location = new Point(148, 140);
+            inputNuevoAnio.Name = "inputNuevoAnio";
+            inputNuevoAnio.Size = new Size(95, 23);
+            inputNuevoAnio.TabIndex = 13;
             // 
-            // textBox4
+            // inputNuevoTitulo
             // 
-            textBox4.Location = new Point(148, 79);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(255, 23);
-            textBox4.TabIndex = 9;
+            inputNuevoTitulo.Location = new Point(148, 79);
+            inputNuevoTitulo.Name = "inputNuevoTitulo";
+            inputNuevoTitulo.Size = new Size(255, 23);
+            inputNuevoTitulo.TabIndex = 9;
             // 
             // label11
             // 
@@ -408,27 +295,310 @@
             label12.TabIndex = 10;
             label12.Text = "Nuevo Autor";
             // 
-            // label13
+            // PrestarLibroTab
             // 
-            label13.AutoSize = true;
-            label13.Location = new Point(42, 53);
-            label13.Name = "label13";
-            label13.Size = new Size(100, 15);
-            label13.TabIndex = 16;
-            label13.Text = "Titulo a modificar";
+            PrestarLibroTab.Controls.Add(label5);
+            PrestarLibroTab.Controls.Add(btnPrestar);
+            PrestarLibroTab.Controls.Add(label6);
+            PrestarLibroTab.Controls.Add(inputPrestar);
+            PrestarLibroTab.Location = new Point(4, 24);
+            PrestarLibroTab.Name = "PrestarLibroTab";
+            PrestarLibroTab.Padding = new Padding(3);
+            PrestarLibroTab.Size = new Size(445, 216);
+            PrestarLibroTab.TabIndex = 1;
+            PrestarLibroTab.Text = "Prestar";
+            PrestarLibroTab.UseVisualStyleBackColor = true;
             // 
-            // textBox5
+            // label5
             // 
-            textBox5.Location = new Point(148, 50);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(255, 23);
-            textBox5.TabIndex = 17;
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 15F);
+            label5.Location = new Point(154, 17);
+            label5.Name = "label5";
+            label5.Size = new Size(126, 28);
+            label5.TabIndex = 11;
+            label5.Text = "Prestar libros";
+            // 
+            // btnPrestar
+            // 
+            btnPrestar.Location = new Point(270, 113);
+            btnPrestar.Name = "btnPrestar";
+            btnPrestar.Size = new Size(118, 23);
+            btnPrestar.TabIndex = 10;
+            btnPrestar.Text = "Prestar";
+            btnPrestar.UseVisualStyleBackColor = true;
+            btnPrestar.Click += Event_Prestar_Click;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(27, 70);
+            label6.Name = "label6";
+            label6.Size = new Size(85, 15);
+            label6.TabIndex = 8;
+            label6.Text = "Titulo a prestar";
+            // 
+            // inputPrestar
+            // 
+            inputPrestar.Location = new Point(118, 67);
+            inputPrestar.Name = "inputPrestar";
+            inputPrestar.Size = new Size(270, 23);
+            inputPrestar.TabIndex = 9;
+            // 
+            // DevolverTab
+            // 
+            DevolverTab.Controls.Add(label7);
+            DevolverTab.Controls.Add(btnDevolver);
+            DevolverTab.Controls.Add(label8);
+            DevolverTab.Controls.Add(inputDevolver);
+            DevolverTab.Location = new Point(4, 24);
+            DevolverTab.Name = "DevolverTab";
+            DevolverTab.Padding = new Padding(3);
+            DevolverTab.Size = new Size(445, 216);
+            DevolverTab.TabIndex = 5;
+            DevolverTab.Text = "Devolver";
+            DevolverTab.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 15F);
+            label7.Location = new Point(144, 27);
+            label7.Name = "label7";
+            label7.Size = new Size(144, 28);
+            label7.TabIndex = 15;
+            label7.Text = "Devolver libros";
+            // 
+            // btnDevolver
+            // 
+            btnDevolver.Location = new Point(285, 125);
+            btnDevolver.Name = "btnDevolver";
+            btnDevolver.Size = new Size(118, 23);
+            btnDevolver.TabIndex = 14;
+            btnDevolver.Text = "Devolver";
+            btnDevolver.UseVisualStyleBackColor = true;
+            btnDevolver.Click += Event_Devolver_Click;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(33, 83);
+            label8.Name = "label8";
+            label8.Size = new Size(94, 15);
+            label8.TabIndex = 12;
+            label8.Text = "Titulo a devolver";
+            // 
+            // inputDevolver
+            // 
+            inputDevolver.Location = new Point(133, 79);
+            inputDevolver.Name = "inputDevolver";
+            inputDevolver.Size = new Size(270, 23);
+            inputDevolver.TabIndex = 13;
+            // 
+            // AntiguedadTab
+            // 
+            AntiguedadTab.Controls.Add(label14);
+            AntiguedadTab.Controls.Add(btnAntiguo);
+            AntiguedadTab.Controls.Add(label15);
+            AntiguedadTab.Controls.Add(inputAntiguo);
+            AntiguedadTab.Location = new Point(4, 24);
+            AntiguedadTab.Name = "AntiguedadTab";
+            AntiguedadTab.Padding = new Padding(3);
+            AntiguedadTab.Size = new Size(445, 216);
+            AntiguedadTab.TabIndex = 2;
+            AntiguedadTab.Text = "Antiguo";
+            AntiguedadTab.UseVisualStyleBackColor = true;
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Font = new Font("Segoe UI", 15F);
+            label14.Location = new Point(116, 12);
+            label14.Name = "label14";
+            label14.Size = new Size(191, 28);
+            label14.TabIndex = 19;
+            label14.Text = "¿El Libro es antigüo?";
+            // 
+            // btnAntiguo
+            // 
+            btnAntiguo.Location = new Point(289, 112);
+            btnAntiguo.Name = "btnAntiguo";
+            btnAntiguo.Size = new Size(118, 23);
+            btnAntiguo.TabIndex = 18;
+            btnAntiguo.Text = "Consultar";
+            btnAntiguo.UseVisualStyleBackColor = true;
+            btnAntiguo.Click += Event_Antiguo_Click;
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Location = new Point(30, 69);
+            label15.Name = "label15";
+            label15.Size = new Size(101, 15);
+            label15.TabIndex = 16;
+            label15.Text = "Titulo a consultar:";
+            // 
+            // inputAntiguo
+            // 
+            inputAntiguo.Location = new Point(137, 66);
+            inputAntiguo.Name = "inputAntiguo";
+            inputAntiguo.Size = new Size(270, 23);
+            inputAntiguo.TabIndex = 17;
+            // 
+            // CalAntiguedadTab
+            // 
+            CalAntiguedadTab.Controls.Add(label16);
+            CalAntiguedadTab.Controls.Add(btnCalcAntiguedad);
+            CalAntiguedadTab.Controls.Add(label17);
+            CalAntiguedadTab.Controls.Add(inputCalcAnt);
+            CalAntiguedadTab.Location = new Point(4, 24);
+            CalAntiguedadTab.Name = "CalAntiguedadTab";
+            CalAntiguedadTab.Padding = new Padding(3);
+            CalAntiguedadTab.Size = new Size(445, 216);
+            CalAntiguedadTab.TabIndex = 3;
+            CalAntiguedadTab.Text = "CalcAnt";
+            CalAntiguedadTab.UseVisualStyleBackColor = true;
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Font = new Font("Segoe UI", 15F);
+            label16.Location = new Point(116, 12);
+            label16.Name = "label16";
+            label16.Size = new Size(186, 28);
+            label16.TabIndex = 19;
+            label16.Text = "Calcular antigüedad";
+            // 
+            // btnCalcAntiguedad
+            // 
+            btnCalcAntiguedad.Location = new Point(291, 114);
+            btnCalcAntiguedad.Name = "btnCalcAntiguedad";
+            btnCalcAntiguedad.Size = new Size(118, 23);
+            btnCalcAntiguedad.TabIndex = 18;
+            btnCalcAntiguedad.Text = "Calcular";
+            btnCalcAntiguedad.UseVisualStyleBackColor = true;
+            btnCalcAntiguedad.Click += Event_CalcAntiguedad_Click;
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Location = new Point(39, 72);
+            label17.Name = "label17";
+            label17.Size = new Size(98, 15);
+            label17.TabIndex = 16;
+            label17.Text = "Titulo a consultar";
+            // 
+            // inputCalcAnt
+            // 
+            inputCalcAnt.Location = new Point(139, 68);
+            inputCalcAnt.Name = "inputCalcAnt";
+            inputCalcAnt.Size = new Size(270, 23);
+            inputCalcAnt.TabIndex = 17;
+            // 
+            // CompararTab
+            // 
+            CompararTab.Controls.Add(label21);
+            CompararTab.Controls.Add(label20);
+            CompararTab.Controls.Add(inputComparar2);
+            CompararTab.Controls.Add(label18);
+            CompararTab.Controls.Add(btnComparar);
+            CompararTab.Controls.Add(label19);
+            CompararTab.Controls.Add(inputComparar1);
+            CompararTab.Location = new Point(4, 24);
+            CompararTab.Name = "CompararTab";
+            CompararTab.Padding = new Padding(3);
+            CompararTab.Size = new Size(445, 216);
+            CompararTab.TabIndex = 6;
+            CompararTab.Text = "Comparar";
+            CompararTab.UseVisualStyleBackColor = true;
+            // 
+            // label21
+            // 
+            label21.Font = new Font("Segoe UI", 9F);
+            label21.Location = new Point(38, 46);
+            label21.Name = "label21";
+            label21.Size = new Size(368, 16);
+            label21.TabIndex = 22;
+            label21.Text = "Ingrese los titulos que desea averiguar si tienen el mismo autor";
+            // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.Location = new Point(35, 120);
+            label20.Name = "label20";
+            label20.Size = new Size(46, 15);
+            label20.TabIndex = 20;
+            label20.Text = "Titulo 2";
+            // 
+            // inputComparar2
+            // 
+            inputComparar2.Location = new Point(105, 117);
+            inputComparar2.Name = "inputComparar2";
+            inputComparar2.Size = new Size(300, 23);
+            inputComparar2.TabIndex = 21;
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Font = new Font("Segoe UI", 15F);
+            label18.Location = new Point(146, 10);
+            label18.Name = "label18";
+            label18.Size = new Size(129, 28);
+            label18.TabIndex = 19;
+            label18.Text = "Comparación";
+            // 
+            // btnComparar
+            // 
+            btnComparar.Location = new Point(289, 159);
+            btnComparar.Name = "btnComparar";
+            btnComparar.Size = new Size(118, 23);
+            btnComparar.TabIndex = 18;
+            btnComparar.Text = "Comparar";
+            btnComparar.UseVisualStyleBackColor = true;
+            btnComparar.Click += Event_Comparar_Click;
+            // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.Location = new Point(35, 82);
+            label19.Name = "label19";
+            label19.Size = new Size(46, 15);
+            label19.TabIndex = 16;
+            label19.Text = "Titulo 1";
+            // 
+            // inputComparar1
+            // 
+            inputComparar1.Location = new Point(105, 78);
+            inputComparar1.Name = "inputComparar1";
+            inputComparar1.Size = new Size(300, 23);
+            inputComparar1.TabIndex = 17;
+            // 
+            // BibliotecaGrid
+            // 
+            BibliotecaGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            BibliotecaGrid.Location = new Point(468, 49);
+            BibliotecaGrid.Name = "BibliotecaGrid";
+            BibliotecaGrid.Size = new Size(403, 371);
+            BibliotecaGrid.TabIndex = 0;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Segoe UI", 20F);
+            label1.ForeColor = Color.Black;
+            label1.Location = new Point(307, 9);
+            label1.Name = "label1";
+            label1.Size = new Size(155, 37);
+            label1.TabIndex = 8;
+            label1.Text = "BIBLIOTECA";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(773, 445);
+            BackColor = Color.WhiteSmoke;
+            ClientSize = new Size(883, 445);
             Controls.Add(label1);
             Controls.Add(BibliotecaGrid);
             Controls.Add(tabControl1);
@@ -437,12 +607,18 @@
             tabControl1.ResumeLayout(false);
             RegistrarTab.ResumeLayout(false);
             RegistrarTab.PerformLayout();
-            PrestarLibroTab.ResumeLayout(false);
-            PrestarLibroTab.PerformLayout();
             ModificarTab.ResumeLayout(false);
             ModificarTab.PerformLayout();
+            PrestarLibroTab.ResumeLayout(false);
+            PrestarLibroTab.PerformLayout();
             DevolverTab.ResumeLayout(false);
             DevolverTab.PerformLayout();
+            AntiguedadTab.ResumeLayout(false);
+            AntiguedadTab.PerformLayout();
+            CalAntiguedadTab.ResumeLayout(false);
+            CalAntiguedadTab.PerformLayout();
+            CompararTab.ResumeLayout(false);
+            CompararTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)BibliotecaGrid).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -473,18 +649,33 @@
         private Label label6;
         private TextBox inputPrestar;
         private Label label13;
-        private TextBox textBox5;
+        private TextBox inputModificarTitulo;
         private Label label9;
-        private TextBox textBox2;
+        private TextBox inputNuevoAutor;
         private Button button1;
         private Label label10;
-        private TextBox textBox3;
-        private TextBox textBox4;
+        private TextBox inputNuevoAnio;
+        private TextBox inputNuevoTitulo;
         private Label label11;
         private Label label12;
         private Label label7;
         private Button btnDevolver;
         private Label label8;
-        private TextBox textBox1;
+        private TextBox inputDevolver;
+        private Label label14;
+        private Button btnAntiguo;
+        private Label label15;
+        private TextBox inputAntiguo;
+        private Label label16;
+        private Button btnCalcAntiguedad;
+        private Label label17;
+        private TextBox inputCalcAnt;
+        private Label label18;
+        private Button btnComparar;
+        private Label label19;
+        private TextBox inputComparar1;
+        private Label label21;
+        private Label label20;
+        private TextBox inputComparar2;
     }
 }

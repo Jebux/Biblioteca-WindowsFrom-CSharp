@@ -20,5 +20,27 @@ namespace BibliotecaForms
             AnioPublicacion = anioPublicacion;
             EstaPrestado = false;
         }
+
+        public void ActualizarTitulo(string nuevotitulo)
+        {
+            Titulo = nuevotitulo;
+        }
+        public void ActualizarAutor(string nuevoAutor)
+        {
+            Autor = nuevoAutor;
+        }
+        public void ActualizarAnio(int nuevoAnio)
+        {
+            AnioPublicacion = nuevoAnio;
+        }
+
+        public void Prestar() 
+        {
+            EstaPrestado = true;
+        }
+        public void Devolver()
+        {
+            EstaPrestado = false;
+        }
     }
 }
